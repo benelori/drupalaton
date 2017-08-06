@@ -1,0 +1,4 @@
+services:
+  drupalaton_reservations.storage:
+    class: Drupal\drupalaton_reservations\Storage\Reservation
+    arguments: ['@entity_type.manager']

@@ -12,14 +12,14 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "reservation_resource",
- *   label = @Translation("Reservation resource"),
+ *   id = "reservations_resource",
+ *   label = @Translation("Reservations resource"),
  *   uri_paths = {
- *     "canonical" = "/api/v1/reservations/{customer_id}/{pnr}"
+ *     "canonical" = "/api/v1/reservations/{customer_id}"
  *   }
  * )
  */
-class ReservationResource extends ResourceBase {
+class ReservationsResource extends ResourceBase {
 
   use ReservationResourceTrait;
 
@@ -80,13 +80,13 @@ class ReservationResource extends ResourceBase {
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($customer_id, $pnr) {
+  public function get($customer_id) {
     $result = [];
-    $entity = $this->reservationStorage->loadReservationsByCustomerIdAndPnr($customer_id, $pnr);
+    $entities = $this->reservationStorage->loadReservationsByCustomerId($customer_id);
 
-    if ($entity) {
-      $result = [
-        'pnr' => $pnr,
+    foreach ($entities as $entity) {
+      $result[$entity->field_pnr->value] = [
+        'pnr' => $entity->field_pnr->value,
         'owner' => $this->getReservationOwner($entity),
         'other_passengers' => $this->getOtherPassengers($entity),
         'routes' => $this->getRoutes($entity),
@@ -94,5 +94,6 @@ class ReservationResource extends ResourceBase {
     }
     return new ResourceResponse($result);
   }
+
 
 }
