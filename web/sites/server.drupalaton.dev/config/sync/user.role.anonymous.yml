@@ -13,5 +13,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'restful get reservation_resource'
+  - 'restful get reservations_resource'
   - 'search content'
   - 'use text format restricted_html'

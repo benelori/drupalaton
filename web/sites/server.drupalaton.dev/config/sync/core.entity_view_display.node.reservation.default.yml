@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.reservation.field_customer_id
     - field.field.node.reservation.field_main_passenger
     - field.field.node.reservation.field_other_passengers
     - field.field.node.reservation.field_pnr
@@ -16,6 +17,14 @@ targetEntityType: node
 bundle: reservation
 mode: default
 content:
+  field_customer_id:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_main_passenger:
     type: entity_reference_revisions_entity_view
     weight: 103

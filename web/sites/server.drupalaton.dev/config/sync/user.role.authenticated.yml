@@ -15,6 +15,7 @@ permissions:
   - 'access site-wide contact form'
   - 'post comments'
   - 'restful get reservation_resource'
+  - 'restful get reservations_resource'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
