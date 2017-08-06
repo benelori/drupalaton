@@ -1,0 +1,22 @@
+uuid: da7ce698-055e-4164-913b-f8d7f090255c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_code
+    - field.field.node.location.field_name
+    - node.type.location
+  module:
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_code: true
+  field_name: true

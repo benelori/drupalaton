@@ -1,0 +1,28 @@
+uuid: 4d9f3343-c59a-4fa6-b53d-d4948a7d05e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_departure
+    - node.type.location
+    - paragraphs.paragraphs_type.route
+id: paragraph.route.field_departure
+field_name: field_departure
+entity_type: paragraph
+bundle: route
+label: Departure
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

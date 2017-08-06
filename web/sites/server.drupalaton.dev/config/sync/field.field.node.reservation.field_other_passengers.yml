@@ -1,0 +1,36 @@
+uuid: a4aeb336-6684-4d4f-852b-cee846461260
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_passengers
+    - node.type.reservation
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: node.reservation.field_other_passengers
+field_name: field_other_passengers
+entity_type: node
+bundle: reservation
+label: 'Other Passengers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      person: person
+    target_bundles_drag_drop:
+      location:
+        weight: 4
+        enabled: false
+      person:
+        enabled: true
+        weight: 5
+      route:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

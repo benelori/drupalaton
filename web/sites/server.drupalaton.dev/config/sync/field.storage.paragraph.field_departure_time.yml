@@ -1,0 +1,20 @@
+uuid: 465fee71-d0d8-4a85-85a2-66a58d407b89
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_departure_time
+field_name: field_departure_time
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 79b18198-394d-44b1-ac99-5cc359031dc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_first_name
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_first_name
+field_name: field_first_name
+entity_type: paragraph
+bundle: person
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

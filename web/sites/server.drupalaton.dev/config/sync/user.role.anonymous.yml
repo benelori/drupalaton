@@ -1,0 +1,17 @@
+uuid: 8faf4ffc-0f27-4ddb-8436-f06f77032689
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'restful get reservation_resource'
+  - 'search content'
+  - 'use text format restricted_html'

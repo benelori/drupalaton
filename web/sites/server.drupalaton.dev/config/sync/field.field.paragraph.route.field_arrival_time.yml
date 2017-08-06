@@ -1,0 +1,21 @@
+uuid: 3953caad-0d99-47dd-9338-e207f82adc5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_arrival_time
+    - paragraphs.paragraphs_type.route
+  module:
+    - datetime
+id: paragraph.route.field_arrival_time
+field_name: field_arrival_time
+entity_type: paragraph
+bundle: route
+label: 'Arrival Time'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

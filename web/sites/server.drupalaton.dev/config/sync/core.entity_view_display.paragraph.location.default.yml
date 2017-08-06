@@ -1,0 +1,30 @@
+uuid: ee2204ce-55a2-4bab-89a2-9b198c4e79b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.location.field_code
+    - field.field.paragraph.location.field_name
+    - paragraphs.paragraphs_type.location
+id: paragraph.location.default
+targetEntityType: paragraph
+bundle: location
+mode: default
+content:
+  field_code:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

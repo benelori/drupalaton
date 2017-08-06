@@ -1,0 +1,51 @@
+uuid: 2621a67e-27f0-47ae-9537-69e8bcb23048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.route.field_arrival
+    - field.field.paragraph.route.field_arrival_time
+    - field.field.paragraph.route.field_departure
+    - field.field.paragraph.route.field_departure_time
+    - paragraphs.paragraphs_type.route
+  module:
+    - datetime
+id: paragraph.route.default
+targetEntityType: paragraph
+bundle: route
+mode: default
+content:
+  field_arrival:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_arrival_time:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_departure:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_departure_time:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

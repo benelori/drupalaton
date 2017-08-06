@@ -1,0 +1,50 @@
+uuid: 38a72632-aaeb-4f0c-a58f-4563e110e4fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person.field_age
+    - field.field.paragraph.person.field_email
+    - field.field.paragraph.person.field_first_name
+    - field.field.paragraph.person.field_last_name
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_age:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_email:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_first_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

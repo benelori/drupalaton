@@ -1,0 +1,22 @@
+uuid: 1fda558a-189d-4699-9118-21c47ae9143d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reservation.field_main_passenger
+    - field.field.node.reservation.field_pnr
+    - node.type.reservation
+  module:
+    - user
+id: node.reservation.teaser
+targetEntityType: node
+bundle: reservation
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_main_passenger: true
+  field_pnr: true

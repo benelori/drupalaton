@@ -1,0 +1,20 @@
+uuid: 88eded6f-abc8-4688-9f10-2679ad2f7d2f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'restful get reservation_resource'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

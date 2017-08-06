@@ -1,0 +1,18 @@
+uuid: 450b09ec-14f4-4c28-8fff-bb554122e25f
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalaton_reservations
+    - serialization
+    - user
+id: reservation_resource
+plugin_id: reservation_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

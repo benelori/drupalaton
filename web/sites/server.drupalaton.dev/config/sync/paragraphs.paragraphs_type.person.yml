@@ -1,0 +1,7 @@
+uuid: 186b7df6-371c-4aa3-917b-e3ca81cbeaaa
+langcode: en
+status: true
+dependencies: {  }
+id: person
+label: Person
+behavior_plugins: {  }

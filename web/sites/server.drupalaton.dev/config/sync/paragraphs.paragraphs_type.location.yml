@@ -1,0 +1,7 @@
+uuid: 2a29d2d5-d8ee-46af-9247-a69a4b834cd9
+langcode: en
+status: true
+dependencies: {  }
+id: location
+label: Location
+behavior_plugins: {  }

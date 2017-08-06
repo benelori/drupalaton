@@ -1,0 +1,57 @@
+uuid: 149cdfc4-ea2d-4d09-8562-d0f2d8f3a223
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reservation.field_main_passenger
+    - field.field.node.reservation.field_other_passengers
+    - field.field.node.reservation.field_pnr
+    - field.field.node.reservation.field_routes
+    - node.type.reservation
+  module:
+    - entity_reference_revisions
+    - user
+id: node.reservation.default
+targetEntityType: node
+bundle: reservation
+mode: default
+content:
+  field_main_passenger:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_other_passengers:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pnr:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_routes:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

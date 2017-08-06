@@ -1,0 +1,33 @@
+uuid: b0405522-0410-4bb2-a3ac-13ceb781a188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.location.field_code
+    - field.field.paragraph.location.field_name
+    - paragraphs.paragraphs_type.location
+id: paragraph.location.default
+targetEntityType: paragraph
+bundle: location
+mode: default
+content:
+  field_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 61d6b629-0dff-4f4e-99bb-01273b2a1d4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_age
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_age
+field_name: field_age
+entity_type: paragraph
+bundle: person
+label: Age
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

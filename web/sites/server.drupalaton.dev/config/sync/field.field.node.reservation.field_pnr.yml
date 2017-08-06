@@ -1,0 +1,19 @@
+uuid: 52f3f6d6-db98-409e-95ee-00a77866f012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pnr
+    - node.type.reservation
+id: node.reservation.field_pnr
+field_name: field_pnr
+entity_type: node
+bundle: reservation
+label: PNR
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
