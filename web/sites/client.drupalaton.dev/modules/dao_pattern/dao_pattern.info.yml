@@ -1,0 +1,5 @@
+name: DAO Pattern
+type: module
+description: Implementation of the DAO pattern.
+core: 8.x
+package: Custom
