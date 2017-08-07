@@ -48,14 +48,13 @@ trait ReservationResourceTrait {
           'name' => $entity->field_routes[$key]->entity->field_departure->entity->field_name->value,
           'code' => $entity->field_routes[$key]->entity->field_departure->entity->field_code->value,
           'time' => $entity->field_routes[$key]->entity->field_departure_time->value,
-          'stopover' => $stopOver,
         ],
         'arrival' => [
           'name' => $entity->field_routes[$key]->entity->field_arrival->entity->field_name->value,
           'code' => $entity->field_routes[$key]->entity->field_arrival->entity->field_code->value,
           'time' => $entity->field_routes[$key]->entity->field_arrival_time->value,
-          'stopover' => $stopOver,
         ],
+        'stopover' => $stopOver,
       ];
     }
     return $output;
