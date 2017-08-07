@@ -1,0 +1,4 @@
+services:
+  webservice_client.reservations:
+    class: Drupal\webservice_client\WebService\Reservation
+    arguments: ['@http_client']
