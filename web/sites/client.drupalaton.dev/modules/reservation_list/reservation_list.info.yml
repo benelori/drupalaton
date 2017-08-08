@@ -1,0 +1,5 @@
+name: Reservation List
+type: module
+description: Reservation list
+core: 8.x
+package: Custom
