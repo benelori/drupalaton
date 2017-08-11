@@ -1,0 +1,7 @@
+reservation_list.reservation_list_controller_list:
+  path: '/reservation_list/list'
+  defaults:
+    _controller: '\Drupal\reservation_list\Controller\ReservationListController::reservations'
+    _title: 'List'
+  requirements:
+    _permission: 'access content'

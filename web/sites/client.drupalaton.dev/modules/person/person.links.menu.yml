@@ -1,0 +1,28 @@
+
+# Passenger menu items definition
+entity.passenger.collection:
+  title: 'Passenger list'
+  route_name: entity.passenger.collection
+  description: 'List Passenger entities'
+  parent: system.admin_structure
+  weight: 100
+
+passenger.admin.structure.settings:
+  title: Passenger settings
+  description: 'Configure Passenger entities'
+  route_name: passenger.settings
+  parent: system.admin_structure
+
+# Customer menu items definition
+entity.customer.collection:
+  title: 'Customer list'
+  route_name: entity.customer.collection
+  description: 'List Customer entities'
+  parent: system.admin_structure
+  weight: 100
+
+customer.admin.structure.settings:
+  title: Customer settings
+  description: 'Configure Customer entities'
+  route_name: customer.settings
+  parent: system.admin_structure

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file route.html.twig
+ * Default theme implementation to present Route data.
+ *
+ * This template is used when viewing Route pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_route()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('route') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

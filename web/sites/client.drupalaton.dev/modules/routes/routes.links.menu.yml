@@ -1,0 +1,28 @@
+
+# Route menu items definition
+entity.route.collection:
+  title: 'Route list'
+  route_name: entity.route.collection
+  description: 'List Route entities'
+  parent: system.admin_structure
+  weight: 100
+
+route.admin.structure.settings:
+  title: Route settings
+  description: 'Configure Route entities'
+  route_name: route.settings
+  parent: system.admin_structure
+
+# Route schedule menu items definition
+entity.route_schedule.collection:
+  title: 'Route schedule list'
+  route_name: entity.route_schedule.collection
+  description: 'List Route schedule entities'
+  parent: system.admin_structure
+  weight: 100
+
+route_schedule.admin.structure.settings:
+  title: Route schedule settings
+  description: 'Configure Route schedule entities'
+  route_name: route_schedule.settings
+  parent: system.admin_structure

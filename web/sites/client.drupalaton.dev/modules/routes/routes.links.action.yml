@@ -1,0 +1,10 @@
+entity.route.add_form:
+  route_name: entity.route.add_form
+  title: 'Add Route'
+  appears_on:
+    - entity.route.collection
+entity.route_schedule.add_form:
+  route_name: entity.route_schedule.add_form
+  title: 'Add Route schedule'
+  appears_on:
+    - entity.route_schedule.collection

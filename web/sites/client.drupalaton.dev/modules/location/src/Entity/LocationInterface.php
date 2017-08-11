@@ -11,9 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup location
  */
-interface LocationInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-
-  // Add get/set methods for your configuration properties here.
+interface LocationInterface extends ContentEntityInterface, EntityChangedInterface {
 
   /**
    * Gets the Location name.
@@ -52,26 +50,5 @@ interface LocationInterface extends  ContentEntityInterface, EntityChangedInterf
    *   The called Location entity.
    */
   public function setCreatedTime($timestamp);
-
-  /**
-   * Returns the Location published status indicator.
-   *
-   * Unpublished Location are only visible to restricted users.
-   *
-   * @return bool
-   *   TRUE if the Location is published.
-   */
-  public function isPublished();
-
-  /**
-   * Sets the published status of a Location.
-   *
-   * @param bool $published
-   *   TRUE to set this Location to published, FALSE to set it to unpublished.
-   *
-   * @return \Drupal\location\Entity\LocationInterface
-   *   The called Location entity.
-   */
-  public function setPublished($published);
 
 }

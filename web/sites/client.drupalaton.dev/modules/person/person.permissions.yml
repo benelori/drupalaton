@@ -1,0 +1,44 @@
+add passenger entities:
+  title: 'Create new Passenger entities'
+
+administer passenger entities:
+  title: 'Administer Passenger entities'
+  description: 'Allow to access the administration form to configure Passenger entities.'
+  restrict access: true
+
+delete passenger entities:
+  title: 'Delete Passenger entities'
+
+edit passenger entities:
+  title: 'Edit Passenger entities'
+
+access passenger overview:
+  title: 'Access the Passenger overview page'
+
+view published passenger entities:
+  title: 'View published Passenger entities'
+
+view unpublished passenger entities:
+  title: 'View unpublished Passenger entities'
+add customer entities:
+  title: 'Create new Customer entities'
+
+administer customer entities:
+  title: 'Administer Customer entities'
+  description: 'Allow to access the administration form to configure Customer entities.'
+  restrict access: true
+
+delete customer entities:
+  title: 'Delete Customer entities'
+
+edit customer entities:
+  title: 'Edit Customer entities'
+
+access customer overview:
+  title: 'Access the Customer overview page'
+
+view published customer entities:
+  title: 'View published Customer entities'
+
+view unpublished customer entities:
+  title: 'View unpublished Customer entities'

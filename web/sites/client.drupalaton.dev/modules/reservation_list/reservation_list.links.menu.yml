@@ -1,0 +1,14 @@
+
+# Reservation menu items definition
+entity.reservation.collection:
+  title: 'Reservation list'
+  route_name: entity.reservation.collection
+  description: 'List Reservation entities'
+  parent: system.admin_structure
+  weight: 100
+
+reservation.admin.structure.settings:
+  title: Reservation settings
+  description: 'Configure Reservation entities'
+  route_name: reservation.settings
+  parent: system.admin_structure

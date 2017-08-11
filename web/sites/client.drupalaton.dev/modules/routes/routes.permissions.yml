@@ -1,0 +1,44 @@
+add route entities:
+  title: 'Create new Route entities'
+
+administer route entities:
+  title: 'Administer Route entities'
+  description: 'Allow to access the administration form to configure Route entities.'
+  restrict access: true
+
+delete route entities:
+  title: 'Delete Route entities'
+
+edit route entities:
+  title: 'Edit Route entities'
+
+access route overview:
+  title: 'Access the Route overview page'
+
+view published route entities:
+  title: 'View published Route entities'
+
+view unpublished route entities:
+  title: 'View unpublished Route entities'
+add route schedule entities:
+  title: 'Create new Route schedule entities'
+
+administer route schedule entities:
+  title: 'Administer Route schedule entities'
+  description: 'Allow to access the administration form to configure Route schedule entities.'
+  restrict access: true
+
+delete route schedule entities:
+  title: 'Delete Route schedule entities'
+
+edit route schedule entities:
+  title: 'Edit Route schedule entities'
+
+access route schedule overview:
+  title: 'Access the Route schedule overview page'
+
+view published route schedule entities:
+  title: 'View published Route schedule entities'
+
+view unpublished route schedule entities:
+  title: 'View unpublished Route schedule entities'

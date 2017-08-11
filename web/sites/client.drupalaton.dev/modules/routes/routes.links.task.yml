@@ -1,0 +1,44 @@
+# Route routing definition
+route.settings_tab:
+  route_name: route.settings
+  title: 'Settings'
+  base_route: route.settings
+
+entity.route.canonical:
+  route_name: entity.route.canonical
+  base_route: entity.route.canonical
+  title: 'View'
+
+entity.route.edit_form:
+  route_name: entity.route.edit_form
+  base_route: entity.route.canonical
+  title: 'Edit'
+
+entity.route.delete_form:
+  route_name:  entity.route.delete_form
+  base_route:  entity.route.canonical
+  title: Delete
+  weight: 10
+
+# Route schedule routing definition
+route_schedule.settings_tab:
+  route_name: route_schedule.settings
+  title: 'Settings'
+  base_route: route_schedule.settings
+
+entity.route_schedule.canonical:
+  route_name: entity.route_schedule.canonical
+  base_route: entity.route_schedule.canonical
+  title: 'View'
+
+entity.route_schedule.edit_form:
+  route_name: entity.route_schedule.edit_form
+  base_route: entity.route_schedule.canonical
+  title: 'Edit'
+
+entity.route_schedule.delete_form:
+  route_name:  entity.route_schedule.delete_form
+  base_route:  entity.route_schedule.canonical
+  title: Delete
+  weight: 10
+

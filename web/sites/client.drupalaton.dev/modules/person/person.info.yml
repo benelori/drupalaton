@@ -1,0 +1,5 @@
+name: person
+type: module
+description: Contains person related implementation.
+core: 8.x
+package: Custom

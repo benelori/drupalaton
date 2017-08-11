@@ -1,0 +1,10 @@
+entity.passenger.add_form:
+  route_name: entity.passenger.add_form
+  title: 'Add Passenger'
+  appears_on:
+    - entity.passenger.collection
+entity.customer.add_form:
+  route_name: entity.customer.add_form
+  title: 'Add Customer'
+  appears_on:
+    - entity.customer.collection

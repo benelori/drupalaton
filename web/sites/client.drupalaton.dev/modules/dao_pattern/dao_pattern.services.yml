@@ -3,8 +3,3 @@ services:
     class: Drupal\dao_pattern\Adapter\Reservation
   dao_pattern.factory:
     class: Drupal\dao_pattern\Model\DaoFactory
-  dao_pattern.business_object.factory:
-    class: Drupal\dao_pattern\BusinessObject\BusinessObjectFactory
-  dao_pattern.business_object.reservations:
-    class: Drupal\dao_pattern\BusinessObject\Reservations
-    arguments: ['@dao_pattern.factory', '@dao_pattern.adapter.reservation']
