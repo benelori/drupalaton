@@ -23,6 +23,9 @@ class DaoFactory {
       case 'webservice':
         return \Drupal::service('webservice_client.reservations');
 
+      case 'database':
+        return \Drupal::service('entity_type.manager')->getStorage('reservation');
+
       default:
         return new DaoNullObject();
     }

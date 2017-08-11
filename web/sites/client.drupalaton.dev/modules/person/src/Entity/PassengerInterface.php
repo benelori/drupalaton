@@ -11,7 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup person
  */
-interface PassengerInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
+interface PassengerInterface extends  ContentEntityInterface {
 
   // Add get/set methods for your configuration properties here.
 
@@ -52,26 +52,5 @@ interface PassengerInterface extends  ContentEntityInterface, EntityChangedInter
    *   The called Passenger entity.
    */
   public function setCreatedTime($timestamp);
-
-  /**
-   * Returns the Passenger published status indicator.
-   *
-   * Unpublished Passenger are only visible to restricted users.
-   *
-   * @return bool
-   *   TRUE if the Passenger is published.
-   */
-  public function isPublished();
-
-  /**
-   * Sets the published status of a Passenger.
-   *
-   * @param bool $published
-   *   TRUE to set this Passenger to published, FALSE to set it to unpublished.
-   *
-   * @return \Drupal\person\Entity\PassengerInterface
-   *   The called Passenger entity.
-   */
-  public function setPublished($published);
 
 }
