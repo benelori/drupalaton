@@ -33,7 +33,8 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   base_table = "customer",
  *   admin_permission = "administer customer entities",
  *   entity_keys = {
- *     "id" = "customer_id",
+ *     "id" = "id",
+ *     "customer_id" = "customer_id",
  *     "passenger_id" = "passenger_id",
  *     "created" = "created",
  *   },
