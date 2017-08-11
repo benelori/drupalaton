@@ -2,6 +2,10 @@
 
 namespace Drupal\dao_pattern\Adapter;
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\reservation_list\Entity\ReservationInterface;
+use \Drupal\reservation_list\Model\Reservation as ReservationBusinessObject;
+
 /**
  * Interface AdapterInterface.
  *
@@ -15,9 +19,13 @@ interface AdapterInterface {
    * @param array $response
    *   The response.
    *
-   * @return array
+   * @return mixed
    *   An array of entities.
    */
-  public function transformWebServiceToEntity(array $response);
+  public function transformWebServiceToBusinessObject(array $response);
+
+  public function transformBusinessObjectToEntity(ReservationBusinessObject $reservation);
+
+  public function transformEntityToBusinessObject(ReservationInterface $reservation);
 
 }

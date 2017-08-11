@@ -35,6 +35,7 @@ class Reservation implements DaoInterface {
    * {@inheritdoc}
    */
   public function loadReservationsByCustomerId($customerId) {
+    throw new \Exception("DIE");
     /** @var \Drupal\Core\Url $url */
     $url = Url::fromUri($this->getBaseUrl() . $customerId, [
       'query' => [

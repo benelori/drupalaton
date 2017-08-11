@@ -18,6 +18,7 @@ use Drupal\user\UserInterface;
  *   id = "reservation",
  *   label = @Translation("Reservation"),
  *   handlers = {
+ *     "storage" = "Drupal\reservation_list\Storage\Reservation",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\reservation_list\ReservationListBuilder",
  *     "views_data" = "Drupal\reservation_list\Entity\ReservationViewsData",

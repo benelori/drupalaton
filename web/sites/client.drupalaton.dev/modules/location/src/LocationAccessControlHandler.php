@@ -21,9 +21,6 @@ class LocationAccessControlHandler extends EntityAccessControlHandler {
     /** @var \Drupal\location\Entity\LocationInterface $entity */
     switch ($operation) {
       case 'view':
-        if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished location entities');
-        }
         return AccessResult::allowedIfHasPermission($account, 'view published location entities');
 
       case 'update':

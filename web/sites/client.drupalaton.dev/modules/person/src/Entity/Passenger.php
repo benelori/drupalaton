@@ -96,6 +96,8 @@ class Passenger extends ContentEntityBase implements PassengerInterface {
       ->setLabel(t('Last Name'))
       ->setDescription(t('The name of the Customer entity.'));
 
+    // TODO add age field if there's time.
+
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
       ->setDescription(t('The time that the entity was created.'));

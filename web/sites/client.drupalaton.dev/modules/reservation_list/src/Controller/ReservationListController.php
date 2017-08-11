@@ -5,6 +5,7 @@ namespace Drupal\reservation_list\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\dao_pattern\Adapter\AdapterInterface;
 use Drupal\dao_pattern\Model\DaoFactory;
+use Drupal\dao_pattern\Model\DaoInterface;
 use Masterminds\HTML5\Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -52,19 +53,25 @@ class ReservationListController extends ControllerBase {
 
   public function reservations() {
     $webServiceDao = $this->daoFactory->getInstance('webservice');
-
     try {
       $response = json_decode($webServiceDao->loadReservationsByCustomerId('CST_1'), TRUE);
+      foreach ($response as $reservation) {
+        $object = $this->adapter->transformWebServiceToBusinessObject($reservation);
+        $this->adapter->transformBusinessObjectToEntity($object);
+        $businessObjects[] = $object;
+      }
     }
-    catch (Exception $exception) {
+    catch (\Exception $exception) {
       $databaseDao = $this->daoFactory->getInstance('database');
       $response = $databaseDao->loadReservationsByCustomerId('CST_1');
-    }
-    foreach ($response as $reservation) {
-      $entities[] = $this->adapter->transformWebServiceToEntity($reservation);
+
+      foreach ($response as $reservation) {
+        $object = $this->adapter->transformEntityToBusinessObject($reservation);
+        $businessObjects[] = $object;
+      }
     }
 
-    var_dump($entities);
+    var_dump($businessObjects);
     die();
     return [
       '#type' => 'markup',
