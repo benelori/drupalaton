@@ -53,6 +53,7 @@ class ReservationListController extends ControllerBase {
 
   public function reservations() {
     $webServiceDao = $this->daoFactory->getInstance('webservice');
+    $businessObjects = [];
     try {
       $response = json_decode($webServiceDao->loadReservationsByCustomerId('CST_1'), TRUE);
       foreach ($response as $reservation) {
