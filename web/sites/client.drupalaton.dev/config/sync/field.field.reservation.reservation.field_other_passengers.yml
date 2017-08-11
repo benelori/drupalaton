@@ -1,0 +1,26 @@
+uuid: e6d118e8-8875-4962-ad18-7daf910b2789
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.reservation.field_other_passengers
+  module:
+    - reservation_list
+id: reservation.reservation.field_other_passengers
+field_name: field_other_passengers
+entity_type: reservation
+bundle: reservation
+label: 'Other Passengers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:passenger'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

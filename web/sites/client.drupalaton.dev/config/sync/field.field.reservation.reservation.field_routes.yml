@@ -1,0 +1,26 @@
+uuid: ad6428d9-f5fe-4c5a-aa3f-c12a11ef4306
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.reservation.field_routes
+  module:
+    - reservation_list
+id: reservation.reservation.field_routes
+field_name: field_routes
+entity_type: reservation
+bundle: reservation
+label: Routes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:route_schedule'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

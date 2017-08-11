@@ -1,0 +1,20 @@
+uuid: 4e0dcc20-cfa7-4032-a8d4-b20d53e05f2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - reservation_list
+    - routes
+id: reservation.field_routes
+field_name: field_routes
+entity_type: reservation
+type: entity_reference
+settings:
+  target_type: route_schedule
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
