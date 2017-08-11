@@ -71,11 +71,9 @@ class ReservationListController extends ControllerBase {
       }
     }
 
-    var_dump($businessObjects);
-    die();
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: list')
+      '#theme' => 'reservation_list',
+      '#reservations' => $businessObjects,
     ];
   }
 

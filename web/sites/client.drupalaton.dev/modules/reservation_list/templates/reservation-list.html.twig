@@ -1,0 +1,5 @@
+<ul>
+  {% for reservation in reservations %}
+    <li>{{ reservation.getPnr() }}</li>
+  {% endfor %}
+</ul>

@@ -21,7 +21,6 @@ class Reservation implements AdapterInterface {
   public function transformEntityToBusinessObject(
     ReservationInterface $reservation
   ) {
-
     /** @var \Drupal\person\Entity\Customer $owner */
     $owner = $reservation->owner->entity;
 
