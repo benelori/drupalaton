@@ -3,3 +3,7 @@ type: module
 description: Reservation list
 core: 8.x
 package: Custom
+dependencies:
+  -  dao_pattern
+  -  person
+  -  webservice_client
