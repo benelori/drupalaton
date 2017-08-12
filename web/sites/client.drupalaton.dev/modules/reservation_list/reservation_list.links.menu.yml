@@ -1,0 +1,5 @@
+reservation.admin.structure.settings:
+  title: Reservation settings
+  description: 'Configure Reservation entities'
+  route_name: reservation.settings
+  parent: system.admin_structure

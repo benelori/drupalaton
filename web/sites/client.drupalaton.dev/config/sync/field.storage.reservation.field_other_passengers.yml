@@ -1,0 +1,20 @@
+uuid: 56ba9e43-fa03-4d5d-8cb0-1c73fd49e713
+langcode: en
+status: true
+dependencies:
+  module:
+    - person
+    - reservation_list
+id: reservation.field_other_passengers
+field_name: field_other_passengers
+entity_type: reservation
+type: entity_reference
+settings:
+  target_type: passenger
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

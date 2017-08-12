@@ -1,0 +1,33 @@
+uuid: ec5e1e90-3518-44a9-b8fc-5cc7a9f1aec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.reservation.reservation.field_other_passengers
+    - field.field.reservation.reservation.field_routes
+  module:
+    - reservation_list
+id: reservation.reservation.default
+targetEntityType: reservation
+bundle: reservation
+mode: default
+content:
+  field_other_passengers:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_routes:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden: {  }

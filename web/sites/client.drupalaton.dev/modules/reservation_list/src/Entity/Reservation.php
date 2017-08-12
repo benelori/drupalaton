@@ -16,11 +16,16 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   label = @Translation("Reservation"),
  *   base_table = "reservation",
  *   handlers = {
- *     "storage" = "Drupal\reservation_list\Storage"
+ *     "storage" = "Drupal\reservation_list\Storage\Reservation",
+ *     "route_provider" = {
+ *       "html" = "Drupal\location\LocationHtmlRouteProvider",
+ *     },
  *   },
+ *   admin_permission = "administer reservation entities",
  *   entity_keys = {
  *     "id" = "id",
- *   }
+ *   },
+ *   field_ui_base_route = "reservation.settings"
  * )
  */
 class Reservation extends ContentEntityBase implements ReservationInterface {

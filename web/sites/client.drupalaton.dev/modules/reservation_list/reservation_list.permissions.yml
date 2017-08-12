@@ -1,0 +1,4 @@
+administer reservation entities:
+  title: 'Administer Reservation entities'
+  description: 'Allow to access the administration form to configure Reservation entities.'
+  restrict access: true
