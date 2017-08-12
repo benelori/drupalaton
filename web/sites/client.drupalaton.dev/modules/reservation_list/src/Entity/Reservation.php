@@ -15,6 +15,9 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   id = "reservation",
  *   label = @Translation("Reservation"),
  *   base_table = "reservation",
+ *   handlers = {
+ *     "storage" = "Drupal\reservation_list\Storage"
+ *   },
  *   entity_keys = {
  *     "id" = "id",
  *   }
