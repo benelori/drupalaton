@@ -12,12 +12,7 @@ class Reservation extends SqlContentEntityStorage implements DaoInterface, Conte
    * {@inheritdoc}
    */
   public function loadReservationsByCustomerId($customerId) {
-    $entities = $this->entityManager->getStorage('customer')->loadByProperties(['customer_id' => $customerId]);
-
-    /** @var \Drupal\person\Entity\Customer $customer */
-    $customer = array_pop($entities);
-
-    return $this->loadByProperties(['owner' => $customer->id()]);
+    return [];
   }
 
 }
