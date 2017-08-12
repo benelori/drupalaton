@@ -18,6 +18,7 @@ use Drupal\routes\Entity\RouteSchedule;
  */
 class Reservation implements AdapterInterface {
 
+  private static $CUSTOMER_ID;
   public function transformEntityToBusinessObject(
     ReservationInterface $reservation
   ) {
@@ -121,12 +122,15 @@ class Reservation implements AdapterInterface {
   }
 
   public function transformBusinessObjectToEntity(ReservationBusinessObject $reservation) {
+    if (!isset(self::$CUSTOMER_ID)) {
+      self::$CUSTOMER_ID = $this->saveOwner($reservation);
+    }
     $reservationEntity = \Drupal\reservation_list\Entity\Reservation::create([
       'pnr' => $reservation->getPnr(),
-      'owner' => $this->saveOwner($reservation),
+      'owner' => self::$CUSTOMER_ID,
     ]);
 
-
+    $otherPassengerIds = [];
     foreach ($reservation->getOtherPassengers() as $otherPassenger) {
       $otherPassengerIds[] = $this->savePassenger($otherPassenger);
     }
