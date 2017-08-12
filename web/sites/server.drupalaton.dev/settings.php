@@ -749,6 +749,17 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
+$databases['default']['default'] = array (
+  'database' => 'server_drupalaton',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => 'db_server',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+
 /**
  * Load local development override configuration, if available.
  *

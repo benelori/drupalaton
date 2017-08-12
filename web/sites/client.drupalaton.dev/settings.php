@@ -760,17 +760,17 @@ $settings['file_scan_ignore_directories'] = [
  * Keep this code block at the end of this file to take full effect.
  */
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
 $databases['default']['default'] = array (
   'database' => 'client_drupalaton',
   'username' => 'root',
   'password' => 'lolo',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => 'db_client',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+ include $app_root . '/' . $site_path . '/settings.local.php';
+}
 $settings['install_profile'] = 'standard';

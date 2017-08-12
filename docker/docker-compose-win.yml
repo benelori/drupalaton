@@ -1,0 +1,113 @@
+version: "2"
+
+services:
+
+# Command Build Image
+# sudo docker-compose -f docker/docker-compose.yml build
+
+# Command Build Containers
+# sudo docker-compose -f docker/docker-compose.yml up -d --force-recreate
+
+# Command login to container
+# sudo docker-compose -f docker/docker-compose.yml exec CONTAINER_ID bash
+
+  # PHP/Apache container.
+  drupal_client:
+    image: httpd:alpine
+    # Not needed here (for Varnish we would need this in order to have the vcl
+    # host names resolved before the compilation phase).
+    depends_on:
+      - db_client
+    ports:
+      - 7012:80
+    # Map project root into /var/www in container. Drupal will be at /var/www/web in container.
+    volumes:
+      - ../:/var/www/html
+      - ./config/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    # Put this service on the same network as the database so that we can use
+    # host names in containers which are properly translated to ip addresses.
+    networks:
+      - local
+  drupal_server:
+    image: httpd:alpine
+    # Not needed here (for Varnish we would need this in order to have the vcl
+    # host names resolved before the compilation phase).
+    depends_on:
+      - db_server
+    ports:
+      - 7013:80
+    # Map project root into /var/www in container. Drupal will be at /var/www/web in container.
+    volumes:
+      - ../:/var/www/html
+      - ./config/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    # Put this service on the same network as the database so that we can use
+    # host names in containers which are properly translated to ip addresses.
+    networks:
+      - local
+  php:
+    build:
+      context: ./config
+      dockerfile: DockerFilePhp
+    entrypoint:
+       - "php-fpm"
+       - "--allow-to-run-as-root"
+    volumes:
+      - ../:/var/www/html
+      - ./config/windows/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    networks:
+      - local
+  db_client:
+    # We don't need a custom image, we take the official image from docker repository.
+    image: mysql:5.7
+    # Add a volume between host and container so that we don't lose the database
+    # when the container is removed.
+    volumes:
+      - ./volumes/db_client:/var/lib/mysql
+    networks:
+      - local
+    restart: always
+    # Forward the 3306 port from container to 3307 so that we can connect a db browser
+    # like PhpStorm or workbench on localhost:3307
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: client_drupalaton
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+  db_server:
+    # We don't need a custom image, we take the official image from docker repository.
+    image: mysql:5.7
+    # Add a volume between host and container so that we don't lose the database
+    # when the container is removed.
+    volumes:
+      - ./volumes/db_server:/var/lib/mysql
+    networks:
+      - local
+    restart: always
+    # Forward the 3306 port from container to 3307 so that we can connect a db browser
+    # like PhpStorm or workbench on localhost:3307
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: server_drupalaton
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+
+  # Drush executable
+  # e.g: docker-compose -f docker/docker-compose-unix.yml run drush --root=/app/web/ cr
+  drush:
+    image: drush/drush
+    volumes:
+      - ../:/app
+    links:
+      - php
+      - db_client
+      - db_server
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge
